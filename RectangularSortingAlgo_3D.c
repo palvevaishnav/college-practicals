@@ -57,7 +57,7 @@ int main(){
 
     for(int i=0;i<n;i++){
         printf("Enter the x and y coordinates of %d th point:",i+1);
-        scanf("%d %d %d",&xpoint[i], &ypoint[i]),&zpoint[i];
+        scanf("%d %d %d",&xpoint[i], &ypoint[i],&zpoint[i]);
     }
 
     // Now we have the cordinates of points too
