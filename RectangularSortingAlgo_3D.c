@@ -11,7 +11,7 @@ RUN MAX MIN LOOP 8 TIMES
 
 int main(){
     int xcor[8],ycor[8],zcor[8];
-    for(int i=0;i<4;i++){
+    for(int i=0;i<8;i++){
         printf("Enter the x and y cordinate of the rectangle: ");
         scanf("%d %d %d",&xcor[i],&ycor[i],&zcor[i]);
     }
@@ -20,7 +20,7 @@ int main(){
     //finding max and min 
     
     int xmin=xcor[0],xmax=xcor[0],ymin=ycor[0],ymax=ycor[0],zmin=zcor[0],zmax=zcor[0];
-    for(int i=0;i<4;i++){
+    for(int i=0;i<8;i++){
         
         if(xcor[i]<xmin){
             xmin=xcor[i];
