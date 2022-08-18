@@ -19,7 +19,7 @@ int main(){
     // we will be needing the maximum and minimum from this set of x and y coordinates.
     //finding max and min 
     
-    int xmin=xcor[0],xmax=xcor[0],ymin=ycor[0],ymax=ycor[0],zmin=zcor[0].zmax=zcor[i];
+    int xmin=xcor[0],xmax=xcor[0],ymin=ycor[0],ymax=ycor[0],zmin=zcor[0],zmax=zcor[0];
     for(int i=0;i<4;i++){
         
         if(xcor[i]<xmin){
