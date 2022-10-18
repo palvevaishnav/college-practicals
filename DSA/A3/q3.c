@@ -21,29 +21,38 @@ char pop(){
 int main(){
 
     char str[40];
-    int len;
+    int len,flag=0;
     int count1=0,count2=0;
+    char ch;
     printf("Enter the parenthesised string:\n");
     scanf("%s",str);
     len=strlen(str);
     for(int i=0;i<len;i++){
-        if(str[i]=="(" || str[i]==")" || str[i]=="{" || str[i]=="}" || str[i]=="[" || str[i]=="]"){
+        ch=str[i];
+        if(str[i]=='(' || str[i]==')' || str[i]=='{' || str[i]=='}' || str[i]=='[' || str[i]==']'){
             push(str[i]);
             count2++;
         }
 
     }
+    // printf("%d\n",count2);
     for(int i=0;i<count2;i++){
-        if(str[i]==pop()){
-            count1++;
+        if( par[i] =='(' &&  par[count2-i-1] !=')'){
+            flag++;
+        }
+        if( par[i] =='{' &&  par[count2-i-1] !='}'){
+            flag++;
+        }
+        if( par[i] =='[' && par[count2-i-1] !=']'){
+            flag++;
         }
     }
-    if(count1==count2){
+    if(flag==0){
         printf("Balanced");
-        return 0;
     }
-
-    printf("Not Balanced");
+    else{
+        printf("Not Balanced");
+    }    
     return 0;
 }
 
